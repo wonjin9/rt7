@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="slider-active">
+                <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'img/hero/main_img.jpg' %}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-8">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay=".5s" ><font color="black">We Are</font> RT<font color="red">7</font></h1>
+                                        <div class="services-caption">
+                                            <h4>RT7 is a company made by traders. <br>
+                                            The first condition of joining our company as a trader is to certify trading revenue of at least $3m as a trader who traded only his own capital without the help of an agency. <br>
+                                            Currently, we are working on creating various communities and platforms for Koreans and traders...</h4>
+                                        </div>
+                                </div>
+                                <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                        <a href="3aboutus.html" class="btn hero-btn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="single-slider slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-8">
+                                <div class="hero__caption">
+                                    <p data-animation="fadeInLeft" data-delay=".4s">Welcome to RT7</p>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s" >We help you to grow your  business</h1>
+
+                                    <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                        <a href="industries.html" class="btn hero-btn">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+        <!-- slider Area End-->
+
+       <!-- We Trusted Start-->
+        <div class="we-trusted-area trusted-padding">
+            <div class="container">
+                <div class="row d-flex align-items-end">
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="trusted-img">
+                            <img src="{% static 'img/hero/main_sub_1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="trusted-caption">
+                           <h2>More Info.</h2>
+                           <p>I. Our frequently used exchange <br>
+                              II. Our volume <br>
+                              III. Our community <br>
+                              IV. What we're doing now. <br>
+                           </p>
+                            <a href="partners.html" class="btn trusted-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- We Trusted End-->
+
+        <!-- services Area Start-->
+        <div class="services-area section-padding2">
+
+        </div>
+        <!-- services Area End-->
+
+
+
+        <!-- Request Back Start -->
+        <div class="request-back-area section-padding30">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-5 col-md-5">
+                        <div class="request-content">
+                            <h3>Request for  Call Back</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <!-- Contact form Start -->
+                        <div class="form-wrapper">
+                            <form id="contact-form" action="#" method="POST">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box  mb-30">
+                                            <input type="text" name="name" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <input type="text" name="email" placeholder="Email">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <button type="submit" class="send-btn">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>     <!-- Contact form End -->
+                </div>
+            </div>
+        </div>
+        <!-- Request Back End -->
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Partners{% endblock %}
+{% block content %}
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'img/hero/about_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Partners</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+
+        <!-- Services Details Start -->
+        <div class="services-details section-padding2">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-1 offset-lg-1 col-xl-7 col-lg-7">
+                        <div class="s-detailsImg">
+                            <img src="{% static 'img/hero/main_sub_2.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="offset-xl-1 offset-lg-1 col-xl-7 col-lg-7">
+                        <div class="s-details-caption">
+                            <h2>We Are RT7!</h2>
+                            <p class="details-pera1">RT7 is a company made by traders. </p>
+                            <p class="details-pera2">The first condition of joining our company as a trader is to certify trading revenue of at least $3m as a trader who traded only his own capital without the help of an agency.</p>
+                            <p class="details-pera3">Currently, we are working on creating various communities and platforms for Koreans and traders.</p>
+                            <p class="details-pera3">RT7 transfer trading techniques in the community, and the members exchange ideas about trading.</p>
+
+                            <!-- btn -->
+                            <a href="4contact.html" class="btn red-btn">Contact Us <i class="ti-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Details End -->
+
+         <!-- Request Back Start -->
+        <div class="request-back-area section-padding30">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-5 col-md-5">
+                        <div class="request-content">
+                            <h3>Request for  Call Back</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <!-- Contact form Start -->
+                        <div class="form-wrapper">
+                            <form id="contact-form" action="#" method="POST">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box  mb-30">
+                                            <input type="text" name="name" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <input type="text" name="email" placeholder="Email">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <button type="submit" class="send-btn">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>     <!-- Contact form End -->
+                </div>
+            </div>
+        </div>
+        <!-- Request Back End -->
+    </main>
+{% endblock %}
