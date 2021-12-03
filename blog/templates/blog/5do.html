@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}What we do{% endblock %}
+{% block content %}
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+        <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'img/hero/about_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>What we do</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+
+        <!-- Portfolio Grid -->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">활동</h2>
+                    <h3 class="section-subheading text-muted">다양한 활동</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/u4vD8JxBbRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">그것이 알고싶다</div>
+                                <div class="portfolio-caption-subheading text-muted">설명</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/tEkvTW-sJKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">박호두</div>
+                                <div class="portfolio-caption-subheading text-muted">호두호두</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="#" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">KaKao</div>
+                                <div class="portfolio-caption-subheading text-muted">설명설명</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'img/jin9/telegram.png' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Lines</div>
+                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'img/jin9/Youtube_icon.png' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Southwest</div>
+                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'img/jin9/coinfor_icon.png' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Coinfor</div>
+                                <div class="portfolio-caption-subheading text-muted">설명</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sns -->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">platform</h2>
+                    <h3 class="section-subheading text-muted">활동하고 있는 곳</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <a href="" target="_blank">
+                            <img src="{% static 'img/jin9/talk_icon.png' %}" alt="">
+                        </a>
+                        <h4 class="my-3">Kakao Talk</h4>
+                        <p class="text-muted">설명</p>
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Responsive Design</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Web Security</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Web Security</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-2">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Web Security</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Details Start -->
+        <div class="services-details section-padding2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="offset-xl-1 offset-lg-1 col-xl-7 col-lg-7">
+                        <div class="s-detailsImg">
+                            <img src="{% static 'img/hero/main_sub_2.jpg' %}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="offset-xl-1 offset-lg-1 col-xl-7 col-lg-7">
+                        <div class="s-details-caption">
+                            <h2>We Are RT7!</h2>
+                            <p class="details-pera1">RT7 is a company made by traders. </p>
+                            <p class="details-pera2">The first condition of joining our company as a trader is to certify trading revenue of at least $3m as a trader who traded only his own capital without the help of an agency.</p>
+                            <p class="details-pera3">Currently, we are working on creating various communities and platforms for Koreans and traders.</p>
+                            <p class="details-pera3">RT7 transfer trading techniques in the community, and the members exchange ideas about trading.</p>
+
+                            <!-- btn -->
+                            <a href="/contact/" class="btn red-btn">Contact Us <i class="ti-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Details End -->
+
+         <!-- Request Back Start -->
+        <div class="request-back-area section-padding30">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-5 col-md-5">
+                        <div class="request-content">
+                            <h3>Request for  Call Back</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <!-- Contact form Start -->
+                        <div class="form-wrapper">
+                            <form id="contact-form" action="#" method="POST">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box  mb-30">
+                                            <input type="text" name="name" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <input type="text" name="email" placeholder="Email">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4">
+                                        <button type="submit" class="send-btn">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>     <!-- Contact form End -->
+                </div>
+            </div>
+        </div>
+        <!-- Request Back End -->
+    </main>
+{% endblock %}

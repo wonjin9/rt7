@@ -15,6 +15,9 @@ def aboutus(request):
 def contact(request):
     return render(request, "blog/4contact.html")
 
+def do(request):
+    return render(request, "blog/5do.html")
+
 
 
 
