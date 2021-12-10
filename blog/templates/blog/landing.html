@@ -2,13 +2,47 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block content %}
+    <style>
+    .jin9-btn1:hover{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-btn1::before{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-btn2:hover{
+    background:MediumTurquoise; color:white;
+    }
+    .jin9-btn2::before{
+    background:MediumTurquoise; color:white;
+    }
+    .jin9-box1{
+    border-style: solid; border-width: 3px 3px 3px 9px; padding: 6px; word-break: break-all; border-color: white; background-color:rgba(211, 211, 211, 0.2); border-radius:5%; color:white; margin:auto; display:block; font-family: "Poppins",sans-serif; font-style: normal; font-weight: 700;
+    }
+    .jin9-box1:hover{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-box1::before{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-box2{
+    border-style: solid; border-width: 3px 3px 3px 9px; padding: 6px; word-break: break-all; border-color: white; background-color:rgba(211, 211, 211, 0.2); border-radius:5%; color:white; margin:auto; display:block; font-family: "Poppins",sans-serif; font-style: normal; font-weight: 700;
+    }
+    .jin9-box2:hover{
+    background:Gold; color:white;
+    }
+    .jin9-box2::before{
+    background:Gold; color:white;
+    }
+
+    </style>
     <main>
         <!-- slider Area Start-->
         <div class="slider-area ">
-            <!-- Mobile Menu -->
+
+            <!-- What we do 슬라이드 -->
             <div class="slider-active">
                 <div class="single-slider d-flex align-items-center" data-background="">
-             <div class="container">
+                    <div class="container">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-8">
                                 <div class="hero__caption">
@@ -16,94 +50,96 @@
                                 </div>
                             </div>
                         </div>
-             </div>
-                </div>
-            </div>
-
-            <div class="slider-active">
-                <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'img/hero/main_img.jpg' %}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-8">
-                                <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".5s" ><font color="black">WHAT</font> RT<font color="red">7</font><font color="black"> DO</font></h1>
-                                        <div class="services-caption">
-                                            <h4>RT7 is a company made by traders. <br>
-                                            The first condition of joining our company as a trader is to certify trading revenue of at least $3m as a trader who traded only his own capital without the help of an agency. <br>
-                                            Currently, we are working on creating various communities and platforms for Koreans and traders...</h4>
-                                        </div>
-                                </div>
-                                <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
-                                        <a href="3aboutus.html" class="btn hero-btn">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--
-                <div class="single-slider slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-8">
-                                <div class="hero__caption">
-                                    <p data-animation="fadeInLeft" data-delay=".4s">Welcome to RT7</p>
-                                    <h1 data-animation="fadeInLeft" data-delay=".6s" >We help you to grow your  business</h1>
-
-                                    <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
-                                        <a href="industries.html" class="btn hero-btn">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            -->
-        </div>
-        <!-- slider Area End-->
+            <!-- What we do 슬라이드 end -->
 
-       <!-- We Trusted Start-->
-        <div class="we-trusted-area trusted-padding">
+        <!-- Youtube Start-->
+        <div class="we-trusted-area trusted-padding" style="padding: 0px;">
             <div class="container">
                 <div class="row d-flex align-items-end">
                     <div class="col-xl-7 col-lg-7">
                         <div class="trusted-img">
-                            <img src="{% static 'img/hero/main_sub_1.jpg' %}" alt="">
+                            <img src="{% static 'img/jin9/youtube_banner.png' %}" style="border-radius:2%;" alt="">
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5">
                         <div class="trusted-caption">
-                           <h2>More Info.</h2>
-                           <p>I. Our frequently used exchange <br>
-                              II. Our volume <br>
-                              III. Our community <br>
-                              IV. What we're doing now. <br>
+                            <h2><img src="{% static 'img/jin9/Youtube_icon.png' %}" style="height:50px; width:55px;"><font color="crimson">  Youtube</font></h2>
+                           <p>I. 설명 <br>
+                              II. ㅎ <br>
+                              III. ㅎ <br>
+                              IV. ㅎ <br>
                            </p>
-                            <a href="partners.html" class="btn trusted-btn">Learn More</a>
+                            <a href="https://www.youtube.com/channel/UC0RgMeINDkir1xAxpfsppjA" class="btn trusted-btn">visit</a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <!-- We Trusted End-->
+        <!-- Youtube End-->
 
-        <!-- services Area Start-->
-        <div class="services-area section-padding2">
+        <!-- Coinfor Start-->
+        <div class="we-trusted-area trusted-padding" style="padding: 50px;">
+            <div class="container">
+                <div class="row d-flex align-items-end">
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="trusted-caption" style="text-align: right; padding-right: 60px; padding-left:115px; margin-right:-152px; background: rgba(255,255,255,0.8); position:relative; z-index: 1;">
+                            <h2><img src="{% static 'img/jin9/coinfor_icon.png' %}" style="height:50px; width:55px; position:relative; z-index: 2;"><font color="DodgerBlue">  COINFOR</font></h2>
+                           <p>I. 설명 <br>
+                              II. ㅎ <br>
+                              III. ㅎ <br>
+                              IV. ㅎ <br>
+                           </p>
+                            <a href="https://www.coinfor.co.kr/" class="btn trusted-btn jin9-btn1" style="background-color:LightSkyBlue;">visit</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="trusted-img">
+                            <img src="{% static 'img/jin9/coinfor_banner.png' %}" style="border-radius:2%;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <!-- services Area End-->
+        <!-- Coinfor End-->
 
+        <!-- simple Start-->
+        <div class="we-trusted-area trusted-padding" style="padding: 50px;">
+            <div class="container">
+                <div class="row d-flex align-items-end">
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="trusted-img">
+                            <img src="{% static 'img/jin9/simple_banner.png' %}" style="border-radius:2%;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="trusted-caption">
+                            <h2><img src="{% static 'img/jin9/simple_logo.png' %}" style="height:50px; width:55px;"><font color="Turquoise">  Simple</font></h2>
+                           <p>I. 설명 <br>
+                              II. ㅎ <br>
+                              III. ㅎ <br>
+                              IV. ㅎ <br>
+                           </p>
+                            <a href="#" class="btn trusted-btn jin9-btn2" style="background-color:Turquoise;">visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- simple End-->
 
-
-        <!-- Request Back Start -->
-        <div class="request-back-area section-padding30">
+        <!-- Telegram Start -->
+        <div class="request-back-area section-padding30" style="padding:50px 0px 50px 0px;">
             <div class="container">
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-4 col-lg-5 col-md-5">
-                        <div class="request-content">
-                            <h3>Request for  Call Back</h3>
-                            <p></p>
+                        <div class="request-content" style="margin-top:10px;">
+                            <h3 style="text-align:center;">Telegram</h3>
+                            <p style="text-align:center;"><img src="{% static 'img/jin9/telegram_icon.png' %}" style="height:100px; width:100px;"></p>
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-7 col-md-7">
@@ -112,27 +148,72 @@
                             <form id="contact-form" action="#" method="POST">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
-                                        <div class="form-box  mb-30">
-                                            <input type="text" name="name" placeholder="Name">
+                                            <button type="button" class="send-btn jin9-box1"   onclick="window.open('https://t.me/RT7official')" style="margin-top:30px;"><font size="5px">RT7</font> official</button>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <button type="submit" class="send-btn jin9-box1" onclick="window.open('https://t.me/youtubeRT7')" style="margin-top:30px;"><font size="5px">RT7</font> youtube</button>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-box mb-30">
-                                            <input type="text" name="email" placeholder="Email">
+                                            <button type="submit" class="send-btn jin9-box1" onclick="window.open('https://t.me/RT7research')"><font size="5px">RT7</font> research</button>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-4 col-md-4">
-                                        <button type="submit" class="send-btn">Send</button>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <button type="submit" class="send-btn jin9-box1" onclick="window.open('https://t.me/RT7invest')"><font size="5px">RT7</font> invest</button>
+                                        </div>
                                     </div>
-                                </div>
+                                    </div>
                             </form>
                         </div>
                     </div>     <!-- Contact form End -->
                 </div>
             </div>
         </div>
-        <!-- Request Back End -->
+        <!-- Telegram End -->
+
+        <!-- KakaoTalk Start -->
+        <div class="request-back-area section-padding30" style="background: #FF7F50; padding:50px 0px 50px 0px;">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-5 col-md-5">
+                        <div class="request-content" style="margin-top:10px;">
+                            <h3 style="text-align:center;">Kakao Talk</h3>
+                            <p style="text-align:center;"><img src="{% static 'img/jin9/talk_icon.png' %}" style="height:110px; width:115px;"></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <!-- Contact form Start -->
+                        <div class="form-wrapper">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                            <button type="button" class="send-btn jin9-box2"   onclick="window.open('https://open.kakao.com/o/gK9vHxPb')" style="margin-top:30px;"><font size="5px">RT7</font> 트롤박스1</button>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <button type="submit" class="send-btn jin9-box2" onclick="window.open('https://open.kakao.com/o/gASZyNNc')" style="margin-top:30px;"><font size="5px">RT7</font> 트롤박스2</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <button type="submit" class="send-btn jin9-box2" onclick="window.open('https://open.kakao.com/o/gyLtTuPc')"><font size="5px">RT7</font> 트롤박스3</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-box mb-30">
+                                            <button type="submit" class="send-btn jin9-box2" onclick="window.open('https://open.kakao.com/o/gQOjA9Wc')"><font size="5px">RT7</font> 트롤박스4</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>     <!-- Contact form End -->
+                </div>
+            </div>
+        </div>
+        <!-- KakaoTalk End -->
         </div>
     </main>
 {% endblock %}
