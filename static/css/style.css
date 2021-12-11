@@ -7,7 +7,3 @@
     position: fixed;
     z-index: 100;
 }
-
-.jin9-btn2:hover::before{
-    background:black; color:white;
-}

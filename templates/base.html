@@ -21,6 +21,71 @@
     <title>{% block title %}{% endblock %}</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+    <!--korean font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Poor+Story&display=swap" rel="stylesheet">
+
+    <style>
+    .jin9-kfont-b{
+        font-family: 'Do Hyeon', sans-serif;
+        }
+    .jin9-kfont-s{
+        font-family: 'Poor Story', cursive;
+        }
+    .jin9-btn1:hover{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-btn1::before{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-btn2:hover{
+    background:MediumTurquoise; color:white;
+    }
+    .jin9-btn2::before{
+    background:MediumTurquoise; color:white;
+    }
+    .jin9-box1{
+    border-style: solid; border-width: 3px 3px 3px 9px; padding: 6px; word-break: break-all; border-color: white; background-color:rgba(211, 211, 211, 0.2); border-radius:5%; color:white; margin:auto; display:block; font-family: "Poppins",sans-serif; font-style: normal; font-weight: 700;
+    }
+    .jin9-box1:hover{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-box1::before{
+    background:DeepSkyBlue; color:white;
+    }
+    .jin9-box2{
+    border-style: solid; border-width: 3px 3px 3px 9px; padding: 6px; word-break: break-all; border-color: white; background-color:rgba(211, 211, 211, 0.2); border-radius:5%; color:white; margin:auto; display:block; font-family: "Poppins",sans-serif; font-style: normal; font-weight: 700;
+    }
+    .jin9-box2:hover{
+    background:Gold; color:white;
+    }
+    .jin9-box2::before{
+    background:Gold; color:white;
+    }
+
+.text-shadow-pop-left {
+	        animation: text-shadow-pop-left 1.2s 1s both;
+}
+ * ----------------------------------------
+ * animation text-shadow-pop-left
+ * ----------------------------------------
+ */
+@keyframes text-shadow-pop-left {
+  0% {
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    text-shadow: -1px 0 #555555, -2px 0 #555555, -3px 0 #555555, -4px 0 #555555, -5px 0 #555555, -6px 0 #555555, -7px 0 #555555, -8px 0 #555555;
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+}
+
+    </style>
 </head>
 
 <body>
