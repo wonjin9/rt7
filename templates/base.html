@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/jin9.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
@@ -25,7 +26,8 @@
     <!--korean font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Poor+Story&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Poor+Story&display=Noto+Sans+KR&display=swap" rel="stylesheet">
+<!--font-family: 'Noto Sans KR', sans-serif;-->
 
     <style>
     .jin9-kfont-b{
@@ -84,7 +86,16 @@
             transform: translateX(8px);
   }
 }
-
+    .jin9-landing-ex{
+    font-size:1rem; font-family: 'Noto Sans KR', sans-serif; margin-bottom: 33px;
+    }
+    @media(min-width: 992px){
+    .d-lg-none
+    {display: none!important;}
+    }
+    .d-block {
+    display: block!
+    }
     </style>
 </head>
 
@@ -108,22 +119,8 @@
             <div class="main-header ">
                 <div class="header-top top-bg d-none d-lg-block">
                    <div class="container-fluid">
-                       <div class="col-xl-12">
+                       <div class="col-xs-12">
                             <div class="row d-flex justify-content-between align-items-center">
-                                <!--div class="header-info-left">
-                                    <ul>
-                                        <li><i class="fas fa-map-marker-alt"></i>65/A, 17th floor, Kings land, New York</li>
-                                        <li><i class="fas fa-envelope"></i>info@consulting.com</li>
-                                    </ul>
-                                </div>
-                                <div class="header-info-right">
-                                    <ul class="header-social">
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                       <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div-->
                             </div>
                        </div>
                    </div>
@@ -131,14 +128,15 @@
                <div class="header-bottom  header-sticky">
                     <div class="container-fluid">
                         <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-1 col-md-1">
+    <!-- Logo -->
+    <div class="col-xl-2 col-lg-1 col-md-1">
                                 <div class="logo">
                                   <a href="/"><img src="{% static 'img/logo/rt7_logo_main.png' %}" alt=""></a>
                                 </div>
                             </div>
-                            <div class="col-xl-8 col-lg-8 col-md-8">
-                                <!-- Main-menu -->
+
+    <!-- Main-menu start-->
+    <div class="col-xl-8 col-lg-8 col-md-8">
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <ul id="navigation">
                                             <li><a href="/air/">Broadcast</a></li>
@@ -149,6 +147,27 @@
                                         </ul>
                                 </div>
                             </div>
+    <!-- Main-menu end-->
+
+    <!-- mobile-menu start-->
+                        <div class="col-xl-8 col-lg-8 col-md-8">
+                            <div class="main-menu f-right d-lg-none d-block">
+                                  <div class="navbar">
+                                      <div class="dropdown">
+                                          <button class="dropbtn" onclick="myFunction()">Dropdown
+                                            <i class="fa fa-caret-down"></i>
+                                          </button>
+
+                                          <div class="dropdown-content" id="myDropdown">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+
                         </div>
                     </div>
                </div>
@@ -242,6 +261,10 @@
 		<!-- Jquery Plugins, main Jquery -->
         <script src="{% static 'js/plugins.js' %}"></script>
         <script src="{% static 'js/main.js' %}"></script>
+
+        <!-- jin9 java -->
+        <script src="{% static 'js/jin9.js' %}"></script>
+
 <!--scrollup button-->
 <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"><i class="ti-arrow-up"></i></a>
 </body>
