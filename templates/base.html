@@ -28,7 +28,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Poor+Story&display=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!--font-family: 'Noto Sans KR', sans-serif;-->
+
+    <!--hamburger static-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
     <style>
+    #MenuButton {
+  display: block;
+  height: 33px;
+  width: 33px;
+  background-color: transparent;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+}
+#MenuButton span {
+  display: block;
+  width: 100%;
+  background-color: black;
+  height: 5px;
+  position: absolute;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
     .jin9-kfont-b{
         font-family: 'Do Hyeon', sans-serif;
         }
@@ -46,15 +75,6 @@
     }
     .jin9-btn2::before{
     background:MediumTurquoise; color:white;
-    }
-    .jin9-box1{
-    border-style: solid; border-width: 3px 3px 3px 9px; padding: 6px; word-break: break-all; border-color: white; background-color:rgba(211, 211, 211, 0.2); border-radius:5%; color:white; margin:auto; display:block; font-family: "Poppins",sans-serif; font-style: normal; font-weight: 700;
-    }
-    .jin9-box1:hover{
-    background:DeepSkyBlue; color:white;
-    }
-    .jin9-box1::before{
-    background:DeepSkyBlue; color:white;
     }
 
 .underline-hover-btn {
@@ -128,15 +148,6 @@
   transition: 1.8s cubic-bezier(0.2, 1, 0.3, 1);
   pointer-events: none;
 }
-
-    .jin9-box2{
-    border-style: solid; border-width: 3px 3px 3px 9px; padding: 6px; word-break: break-all; border-color: white; background-color:rgba(211, 211, 211, 0.2); border-radius:5%; color:white; margin:auto; display:block; font-family: "Poppins",sans-serif; font-style: normal; font-weight: 700; width:100%;}
-    .jin9-box2:hover{
-    background:Gold; color:white;
-    }
-    .jin9-box2::before{
-    background:Gold; color:white;
-    }
 
 .text-shadow-pop-left {
 	        animation: text-shadow-pop-left 1.2s 1s both;
@@ -304,7 +315,7 @@
   }
 }
 .fanfact-promo-numbers .promo-number.style-three .odometer-wrap {
-  font-size: 75px;
+  font-size: 60px;
   color: #4776e6;
 }
 @media only screen and (max-width: 1199px) {
@@ -495,11 +506,31 @@
     </div>
     <!-- Main-menu end-->
 
+    <!--hamburger-menu start
+    <div class="col-xl-1 col-lg-1 col-9">
+        <div class="f-right d-lg-none d-block">
+            <div id="MenuButton">
+                <span id='line1'></span>
+	            <span id='line2'></span>
+	            <span id='line3'></span>
+                <div class="dropdown">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/">Home</a>
+                        <a href="/portfolio/">Portfolio</a>
+                        <a href="/air/">Media</a>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+<!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js'></script><script  src="./script.js"></script>
+
     <!-- mobile-menu start-->
     <div class="col-xl-1 col-lg-1 col-9">
         <div class="main-menu f-right d-lg-none d-block">
             <div class="dropdown">
-                <button class="dropbtn"><img src="{% static 'img/jin9/menu-button.png' %}" style="width:25px; height:auto;"></button>
+                <button class="dropbtn" style="background-color: transparent;"><img src="{% static 'img/jin9/menu-button.png' %}" style="width:30px; height:auto;"></button>
                 <div class="dropdown-content">
                     <a href="/">Home</a>
                     <a href="/portfolio/">Portfolio</a>
@@ -519,7 +550,6 @@
             {% block content %}
 
             {% endblock %}
-
 
    <footer>
        <!-- Footer Start-->
@@ -574,7 +604,74 @@
        <!-- Footer End-->
    </footer>
 
-	<!-- JS here -->
+        <!-- hamburger java -->
+        <script>
+        var inTL;
+var selectT;
+var selected = false;
+
+var button = $("#MenuButton");
+button.click(onClick);
+
+var line1 = $("#line1");
+var line2 = $("#line2");
+var line3 = $("#line3");
+
+build();
+
+function build(){
+  	TweenMax.set([line1, line2, line3], {scaleX:0.1, transformOrigin:"50% 50%"});
+
+     intTL = new TimelineMax({onComplete:onOpened});
+		intTL.pause();
+     intTL.addLabel("enter", 0);
+     intTL.addLabel("expand", 0.4);
+     intTL.addLabel("position", 0.6);
+
+     intTL.add(TweenMax.to([line1, line2, line3], 0.45, {y:28, ease:Power4.easeIn}), "enter");
+
+		intTL.add(TweenMax.to([line1, line2, line3], 0.45, {scaleX:1, ease:Power4.easeOut}), "expand");
+
+		intTL.add(TweenMax.to(line1, 0.4, {scaleX:1, ease:Power4.easeOut}), "position");
+		intTL.add(TweenMax.to(line2, 0.4, {scaleX:1, y:18, ease:Power4.easeOut}), "position");
+		intTL.add(TweenMax.to(line3, 0.4, {scaleX:1, y:8, ease:Power4.easeOut}), "position");
+		intTL.play();
+}
+
+function onOpened(){
+   selectT = new TimelineMax({});
+		selectT.pause();
+		selectT.addLabel("enter", 0);
+		selectT.addLabel("join", 0.25);
+		selectT.addLabel("rotate", 0.5);
+		selectT.addLabel("end", 0.75);
+
+		selectT.add(TweenMax.to(line3, 0.25, {y:3, ease:Power3.easeOut}), "enter");
+		selectT.add(TweenMax.to(line1, 0.25, {y:33, ease:Power3.easeOut}), "enter");
+
+		selectT.add(TweenMax.to(line3, 0.25, {y:18, ease:Power3.easeOut}), "join");
+		selectT.add(TweenMax.to(line1, 0.25, {y:18, ease:Power3.easeOut}), "join");
+
+		selectT.add(TweenMax.to(line3, 0.25, {rotation:630, backgroundColor:0x000000, ease:Power3.easeOut}), "rotate");
+		selectT.add(TweenMax.to(line2, 0.25, {rotation:630, backgroundColor:0x000000, ease:Power3.easeOut}), "rotate");
+		selectT.add(TweenMax.to(line1, 0.25, {rotation:630, backgroundColor:0x000000, ease:Power3.easeOut}), "rotate");
+
+		selectT.add(TweenMax.to(line3, 0.25, {rotation:585, ease:Power3.easeOut}), "end");
+		selectT.add(TweenMax.to(line2, 0.25, {rotation:675, ease:Power3.easeOut}), "end");
+		selectT.add(TweenMax.to(line1, 0.25, {rotation:675, ease:Power3.easeOut}), "end");
+}
+
+function onClick(e){
+  if(selected){
+	  selected = false;
+	  selectT.reverse();
+	}else{
+	 selected = true;
+	 selectT.play();
+  }
+}
+    </script>
+
         <script src= "{% static 'js/jin9.js' %}"></script>
 
 		<!-- All JS Custom Plugins Link Here here -->
@@ -617,11 +714,11 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-    <!--font awesome-->
-    <script src="https://kit.fontawesome.com/afed5079e8.js" crossorigin="anonymous"></script>
+        <!--font awesome-->
+        <script src="https://kit.fontawesome.com/afed5079e8.js" crossorigin="anonymous"></script>
 
-<!--scrollup button-->
-<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"><i class="ti-arrow-up"></i></a>
+        <!--scrollup button-->
+        <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"><i   class="ti-arrow-up"></i></a>
 </body>
 
 </html>
