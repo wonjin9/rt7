@@ -3,9 +3,9 @@
 {% block title %}Portfolio{% endblock %}
 {% block content %}
     <main>
-        <!-- slider Area Start-->
+        <!-- slider Area Start
         <div class="slider-area ">
-            <!-- Mobile Menu -->
+            <!-- Mobile Menu
         <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'img/hero/about_hero.jpg' %}">
                 <div class="container">
                     <div class="row">
@@ -19,6 +19,86 @@
             </div>
         </div>
         <!-- slider Area End-->
+<br><br><br>
+        <!--trading 소제목-->
+        <div class="hr-sect py-5 mt-5" style="width: 70%; margin: 0 auto; font-size: 2.3rem; font-weight: 600; margin-bottom: 30px; color: #002d5b; font-family: Poppins, sans-serif; text-align: center; line-height: 1.2; text-transform: uppercase;">Trading</div>
+        <!--trading 소제목 end-->
+
+        <!--Trading start-->
+        <div class="fanfact-block py-5 ">
+            <div class="container ml-b-55" style="width: 70%;
+    margin: 0 auto;">
+                <div class="row justify-content-center fanfact-promo-numbers">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="promo-number style-three">
+                                    <div class="odometer-wrap">
+                                        $<div id="counter1"></div>
+                                        B/m+
+                                    </div>
+                                    <!-- /.odometer-wrap -->
+                                    <h4 class="promo-title">RT7 volume</h4>
+                        </div>
+                        <!-- /.promo-number -->
+                    </div>
+                    <!-- /.col-lg-3 -->
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="promo-number style-three">
+                                    <div class="odometer-wrap">
+                                        <div id="counter2"></div>
+                                       k+
+                                    </div>
+                                    <!-- /.odometer-wrap -->
+                                    <h4 class="promo-title">Following traders                                    </h4>
+                        </div>
+                        <!-- /.promo-number -->
+                    </div>
+                    <!-- /.col-lg-3 -->
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="promo-number style-three">
+                                    <div class="odometer-wrap">
+                                        $<div id="counter3"></div>
+                                        B/m+
+                                    </div>
+                                    <!-- /.odometer-wrap -->
+                                    <h4 class="promo-title">RT7 follower’s volume</h4>
+                        </div>
+                        <!-- /.promo-number -->
+                    </div>
+                    <!-- /.col-lg-3 -->
+                </div>
+                <!-- /.fanfact-promo-numbers -->
+            </div>
+        </div>
+        <!--Trading end-->
+
+
+        <!--investment 소제목-->
+        <div class="hr-sect py-5" style="width: 70%; margin: 0 auto; font-size: 2.3rem; font-weight: 600; margin-bottom: 30px; color: #002d5b; font-family: Poppins, sans-serif; text-align: center; line-height: 1.2; text-transform: uppercase;">Investment</div>
+        <!--investment 소제목 end-->
+
+        <!--investment 내용-->
+        <div class="stage">
+
+        <div class="container">
+            <div class="ring">
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+            </div>
+        </div>
+        </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script><script  src="./script.js"></script>
+        <!--investment 내용 end-->
+
 
         <!-- Services Details Start
         <div class="services-details section-padding2">
@@ -83,5 +163,36 @@
             </div>
         </div>
         <!-- Request Back End -->
+
+        <script>
+        function numberCounter(target_frame, target_number) {
+    this.count = 0; this.diff = 0;
+    this.target_count = parseInt(target_number);
+    this.target_frame = document.getElementById(target_frame);
+    this.timer = null;
+    this.counter();
+};
+    numberCounter.prototype.counter = function() {
+        var self = this;
+        this.diff = this.target_count - this.count;
+
+        if(this.diff > 0) {
+            self.count += Math.ceil(this.diff / 5);
+        }
+
+        this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+        if(this.count < this.target_count) {
+            this.timer = setTimeout(function() { self.counter(); }, 70);
+        } else {
+            clearTimeout(this.timer);
+        }
+    };
+
+new numberCounter("counter3", 100);
+new numberCounter("counter2", 200);
+new numberCounter("counter1", 20);
+    </script>
+
     </main>
 {% endblock %}
