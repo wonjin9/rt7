@@ -427,7 +427,7 @@
         this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
         if(this.count < this.target_count) {
-            this.timer = setTimeout(function() { self.counter(); }, 75);
+            this.timer = setTimeout(function() { self.counter(); }, 140);
         } else {
             clearTimeout(this.timer);
         }
